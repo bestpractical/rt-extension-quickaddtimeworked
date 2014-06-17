@@ -1,12 +1,10 @@
 use inc::Module::Install;
 
-
 RTx 'RT-Extension-QuickAddTimeWorked';
-all_from 'lib/RT/Extension/QuickAddTimeWorked.pm';
-readme_from 'lib/RT/Extension/QuickAddTimeWorked.pm';
-license  'gplv2';
+repository 'https://github.com/bestpractical/rt-extension-quickaddtimeworked';
 
-requires_rt("3.8.3");
+requires_rt '4.0.0';
+rt_too_new '4.4.0';
 
 sign;
 WriteAll;
