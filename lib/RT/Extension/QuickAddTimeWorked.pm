@@ -4,6 +4,16 @@ package RT::Extension::QuickAddTimeWorked;
 
 our $VERSION = '1.00';
 
+$RT::Config::META{'QuickAddTimeWorked'} = {
+    Section         => 'Ticket display',
+    Overridable     => 1,
+    Widget          => '/Widgets/Form/Boolean',
+    WidgetArguments => {
+        Description => 'Display Add time worked entry at Dates Widget', # loc
+        Hints       => '(' . __PACKAGE__ . ')',
+    },
+};
+
 =head1 NAME
 
 RT-Extension-QuickAddTimeWorked - Quick "add to time worked" entry on the ticket display page
