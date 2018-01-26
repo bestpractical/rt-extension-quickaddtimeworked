@@ -2,6 +2,7 @@
 $TicketObj
 </%args>
 <%init>
+return unless RT->Config->Get( 'QuickAddTimeWorked', $session{'CurrentUser'} );
 # The self service interface doesn't support updating time fields.
 return unless $session{CurrentUser}->Privileged
           and $session{CurrentUser}->HasRight( Object => $TicketObj, Right => "ModifyTicket" );
